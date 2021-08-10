@@ -8,9 +8,9 @@ import random
 
 Ek = Client(
     "Password Generator Bot",
-    bot_token = "1744790210:AAEP6Yg3FIghktE-lSNq14OO6DshpGJLiAk",
-    api_id = "2276866",
-    api_hash = "a72a77f22e3722d9fcc270c609fd3b42"
+    bot_token = "",
+    api_id = "",
+    api_hash = ""
 )
 
 @Ek.on_message(filters.private & filters.command(["start"]))
