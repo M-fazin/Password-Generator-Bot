@@ -30,8 +30,8 @@ async def about(bot, message):
 async def password(bot, message):
     password = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+"
     limit = int(message.text)
-    if limit >= 85:
-        text = "Sorry limit is 85"
+    if limit >= 85 or limit <= 0:
+        text = "Sorry limit is 1 to 84"
     else:
         randomValue = random.sample(password, limit)
         randomValue = "".join(randomValue)
