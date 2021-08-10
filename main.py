@@ -3,17 +3,15 @@
 from pyrogram import  Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-from config import Config
-
 import random
 import os
 
 
 Ek = Client(
     "Password Generator Bot",
-    bot_token=Config.BOT_TOKEN,
-    api_id=Config.APP_ID,
-    api_hash=Config.API_HASH
+    bot_token = os.environ["BOT_TOKEN"],
+    api_id = int(os.environ["API_ID"]),
+    api_hash = os.environ("API_HASH")
 )
 
 @Ek.on_message(filters.private & filters.command(["start"]))
@@ -30,14 +28,15 @@ async def about(bot, message):
 	
 @Ek.on_message(filters.private & filters.text)
 async def password(bot, message):
-	password = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+"
-	
-	limit = int(message.text)
-	
-	randomValue=random.sample(password,limit)
-	randomValue="".join(randomValue)
-	
-	await message.reply_text(f"**Your Password Generated Succesfully** :- \n `{randomValue}` \n\n**Join @EKBOTZ_UPDATE", True)
+    password = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+"
+    limit = int(message.text)
+    if limit >= 85:
+        text = "Sorry limit is 85"
+    else:
+        randomValue = random.sample(password, limit)
+        randomValue = "".join(randomValue)
+        text = f"**Your Password Generated Succesfully** :- \n `{randomValue}` \n\n**Join @EKBOTZ_UPDATE"
+    await message.reply_text(text, True)
 			
 
 			
