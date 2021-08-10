@@ -1,0 +1,18 @@
+{
+    "name": "Password-Generator-Bot",
+    "description": "A Simple Telegram Bot That Can Generate Random Password With Pyrogram Framework.",
+    "repository": "https://github.com/M-fazin/Password-Generator-Bot",
+    "keywords": ["password", "random", "Password-Generator-Bot","telegram bot", "non-readable"],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your Telegram Bot Token From @Botfather"
+        },
+        "API_ID": {
+            "description": "Your API_ID from https://my.telegram.org/"
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from https://my.telegram.org/"
+        }
+    },
+    "buildpacks": [{"url": "heroku/python"}]
+}
