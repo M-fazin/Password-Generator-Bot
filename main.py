@@ -3,15 +3,17 @@
 from pyrogram import  Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+from config import Config
+
 import random
 import os
 
 
 Ek = Client(
     "Password Generator Bot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ("API_HASH")
+    bot_token=Config.BOT_TOKEN,
+    api_id=Config.APP_ID,
+    api_hash=Config.API_HASH
 )
 
 @Ek.on_message(filters.private & filters.command(["start"]))
