@@ -1,0 +1,41 @@
+# Author M_fazin <github.com/M-fazin>
+
+from pyrogram import  Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+import random
+
+
+Ek = Client(
+    "Password Generator Bot",
+    bot_token = "1744790210:AAEP6Yg3FIghktE-lSNq14OO6DshpGJLiAk",
+    api_id = "2276866",
+    api_hash = "a72a77f22e3722d9fcc270c609fd3b42"
+)
+
+@Ek.on_message(filters.private & filters.command(["start"]))
+async def start(bot, message):
+	await message.reply_text(f"Hai {message.from_user.mention} \n\n**I Am Password Generator Bot. I Can Generate Strong Passwords At Your Wish Length (Max. 84).** \n\nFor Know More /help", True , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Support Group", url = "https://telegram.me/ekbotz_support")],[InlineKeyboardButton("Repo", url = "https://github.com/M-fazin/Password-Generator-Bot"),InlineKeyboardButton("Deploy", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Password-Generator-Bot")],[InlineKeyboardButton("Developer", url = "https://github.com/M-fazin/")]]))
+	
+@Ek.on_message(filters.private & filters.command(["help"]))
+async def help(bot, message):
+	await message.reply_text(f"Hai {message.from_user.mention} \n\n**There Is Nothing To Know More.** \n- Send Me The Limit Of Your Password \n- I Will Give The Password Of That Limit. \n\nEx:- `20` \n\n**Note :-**\n• Only Digits Are Allowed \n• Maximum Allowed Digits Till 84 (I Can't Generate Passwords Above The Length 84)", True , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Source Code", url = "https://github.com/M-fazin/Password-Generator-Bot")]]))
+	
+@Ek.on_message(filters.private & filters.command(["about", "source", "repo"]))
+async def about(bot, message):
+ await message.reply_text(f"**• Bot :** Password Generator Bot\n\n**• Developer :** [M-fazin](https://github.com/M-fazin)\n\n**• Channel :** @EKBOTZ_UPDATE\n\n**• Support :** @ekbotz_support \n\n**• Source Code :** [Password Generator Bot](https://github.com/M-fazin/Password-Generator-Bot)\n\n**• Language :** Python 3\n\n**• Framework :** Pyrogram", quote = True, disable_web_page_preview = True)	
+	
+@Ek.on_message(filters.private & filters.text)
+async def password(bot, message):
+	password = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+"
+	
+	limit = int(message.text)
+	
+	randomValue=random.sample(password,limit)
+	randomValue="".join(randomValue)
+	
+	await message.reply_text(f"**Your Password Generated Succesfully** :- \n `{randomValue}` \n\n**Join @EKBOTZ_UPDATE", True)
+			
+
+			
+Ek.run()
