@@ -19,7 +19,7 @@ Ek = Client(
 async def start(bot, message):
         text = f"Hai {message.from_user.mention} \n\n**I Am Password Generator Bot. I Can Generate Strong Passwords At Your Wish Length (Max. 84).** \n\nFor Know More /help"
         buttons = reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Channel 🔰", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Support Group ⭕️", url = "https://telegram.me/ekbotz_support")],[InlineKeyboardButton("Repo 🗂️", url = "https://github.com/M-fazin/Password-Generator-Bot"),InlineKeyboardButton("Deploy 🗃️", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Password-Generator-Bot")],[InlineKeyboardButton("Developer 💡", url = "https://github.com/M-fazin/")]])
-        await message.reply_text(text, buttons, True)
+        await message.reply_text(text, True, buttons)
 	# await message.reply_text(f"Hai {message.from_user.mention} \n\n**I Am Password Generator Bot. I Can Generate Strong Passwords At Your Wish Length (Max. 84).** \n\nFor Know More /help", True , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Support Group", url = "https://telegram.me/ekbotz_support")],[InlineKeyboardButton("Repo", url = "https://github.com/M-fazin/Password-Generator-Bot"),InlineKeyboardButton("Deploy", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Password-Generator-Bot")],[InlineKeyboardButton("Developer", url = "https://github.com/M-fazin/")]]))
 	
 @Ek.on_message(filters.private & filters.command(["help"]))
