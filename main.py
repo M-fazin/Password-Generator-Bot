@@ -24,7 +24,7 @@ async def start(bot, update):
         # qoute=True,
         # reply_markup=BUTTONS
     # )
-        client.send_message(
+        Ek.send_message(
     chat_id=message.chat.id,
     text=TEXT,
     reply_markup = BUTTONS
