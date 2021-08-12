@@ -38,7 +38,7 @@ async def help(bot, update):
     )
 	
 @Ek.on_message(filters.private & filters.command(["about", "source", "repo"]))
-async def about(bot, message):
+async def about(bot, update):
         TEXT = "**• Bot :** Password Generator Bot\n\n**• Developer :** [M-fazin](https://github.com/M-fazin)\n\n**• Channel :** @EKBOTZ_UPDATE\n\n**• Support :** @ekbotz_support \n\n**• Source Code :** [Password Generator Bot](https://github.com/M-fazin/Password-Generator-Bot)\n\n**• Language :** Python 3\n\n**• Framework :** Pyrogram"
 	await update.reply_text(
         text=TEXT,
