@@ -29,7 +29,7 @@ async def start(bot, update):
 @Ek.on_message(filters.private & filters.command(["help"]))
 async def help(bot, update):
         HELP = "Hai {} \n\n**There Is Nothing To Know More.** \n- Send Me The Limit Of Your Password \n- I Will Give The Password Of That Limit. \n\nEx:- `20` \n\n**Note :-**\n• Only Digits Are Allowed \n• Maximum Allowed Digits Till 84 (I Can't Generate Passwords Above The Length 84)"
-        HELP_BUTTON = InlineKeyboardMarkup([[InlineKeyboardButton("Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Source Code", url = "https://github.com/M-fazin/Password-Generator-Bot")]])
+        HELP_BUTTON = InlineKeyboardMarkup([[InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Password-Generator-Bot")]])
         await update.reply_text(
         text=HELP.format(update.from_user.mention),
         reply_markup=HELP_BUTTON,
@@ -39,12 +39,12 @@ async def help(bot, update):
 	
 @Ek.on_message(filters.private & filters.command(["about", "source", "repo"]))
 async def about(bot, update):
-        TEXT = "**• Bot :** Password Generator Bot\n\n**• Developer :** [M-fazin](https://github.com/M-fazin)\n\n**• Channel :** @EKBOTZ_UPDATE\n\n**• Support :** @ekbotz_support \n\n**• Source Code :** [Password Generator Bot](https://github.com/M-fazin/Password-Generator-Bot)\n\n**• Language :** Python 3\n\n**• Framework :** Pyrogram"
+	ABOUT = "**•🤖 Bot :** Password Generator Bot\n\n**•🧑‍💻 Developer :** [M-fazin](https://github.com/M-fazin)\n\n**•💻 Channel :** @EKBOTZ_UPDATE\n\n**•🖱️ Support :** @ekbotz_support \n\n**•🗂️ Source Code :** [Password Generator Bot](https://github.com/M-fazin/Password-Generator-Bot)\n\n**•⚙️ Language :** Python 3\n\n**•🛡️ Framework :** Pyrogram"
 	await update.reply_text(
-        text=TEXT,
-        disable_web_page_preview=True,
-        quote=True
-    )
+	text=ABOUT,
+	disable_web_page_preview=True,
+	quote=True
+	)
 	
 @Ek.on_message(filters.private & filters.text)
 async def password(bot, message):
