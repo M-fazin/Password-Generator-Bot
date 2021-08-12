@@ -18,13 +18,19 @@ Ek = Client(
 @Ek.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
         TEXT = f"Hai {update.from_user.mention} \n\n**I Am Password Generator Bot. I Can Generate Strong Passwords At Your Wish Length (Max. 84).** \n\nFor Know More /help"
-        BUTTONS = reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Channel 🔰", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Support Group ⭕️", url = "https://telegram.me/ekbotz_support")],[InlineKeyboardButton("Repo 🗂️", url = "https://github.com/M-fazin/Password-Generator-Bot"),InlineKeyboardButton("Deploy 🗃️", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Password-Generator-Bot")],[InlineKeyboardButton("Developer 💡", url = "https://github.com/M-fazin/")]])
+        BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton("Channel 🔰", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Support Group ⭕️", url = "https://telegram.me/ekbotz_support")],[InlineKeyboardButton("Repo 🗂️", url = "https://github.com/M-fazin/Password-Generator-Bot"),InlineKeyboardButton("Deploy 🗃️", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Password-Generator-Bot")],[InlineKeyboardButton("Developer 💡", url = "https://github.com/M-fazin/")]])
         # await update.reply_text(
         # text=TEXT,
         # qoute=True,
         # reply_markup=BUTTONS
     # )
-        await message.reply_text(TEXT, qoute=True, BUTTONS)
+        client.send_message(
+    chat_id=message.chat.id,
+    text=TEXT,
+    reply_markup = BUTTONS
+    reply_to_message_id=message.message_id
+)
+        # await message.reply_text(TEXT, qoute=True, BUTTONS)
 	# await message.reply_text(f"Hai {message.from_user.mention} \n\n**I Am Password Generator Bot. I Can Generate Strong Passwords At Your Wish Length (Max. 84).** \n\nFor Know More /help", True , reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Support Group", url = "https://telegram.me/ekbotz_support")],[InlineKeyboardButton("Repo", url = "https://github.com/M-fazin/Password-Generator-Bot"),InlineKeyboardButton("Deploy", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Password-Generator-Bot")],[InlineKeyboardButton("Developer", url = "https://github.com/M-fazin/")]]))
 	
 @Ek.on_message(filters.private & filters.command(["help"]))
