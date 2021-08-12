@@ -30,12 +30,12 @@ async def start(bot, update):
 async def help(bot, update):
         TEXT = "Hai {} \n\n**There Is Nothing To Know More.** \n- Send Me The Limit Of Your Password \n- I Will Give The Password Of That Limit. \n\nEx:- `20` \n\n**Note :-**\n• Only Digits Are Allowed \n• Maximum Allowed Digits Till 84 (I Can't Generate Passwords Above The Length 84)"
         BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton("Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Source Code", url = "https://github.com/M-fazin/Password-Generator-Bot")]])
-	await update.reply_text(
+        await update.reply_text(
         text=TEXT.format(update.from_user.mention),
         reply_markup=BUTTONS,
         disable_web_page_preview=True,
         quote=True
-    )
+        )
 	
 @Ek.on_message(filters.private & filters.command(["about", "source", "repo"]))
 async def about(bot, update):
