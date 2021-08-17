@@ -60,7 +60,7 @@ async def password(bot, message):
         randomValue = "".join(randomValue)
         text = f"**Your Password Generated Succesfully.** \nYour Password Limit : `{limit}`. \nPassword 👇 :- \n`{randomValue}` \n\n**Join @EKBOTZ_UPDATE"
         await message.reply_text(text, True)
-			
+	
 
 			
 Ek.run()
