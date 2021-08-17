@@ -51,8 +51,8 @@ async def password(bot, message):
     password = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+"
     try:
     limit = int(message.text)
-    except:
-        pass    
+except:
+    pass    
     if limit >= 85 or limit <= 0:
         text = "Sorry... Failed To Create Password Because Limit is 1 to 84"
     else:
