@@ -7,10 +7,13 @@
 <details>
   <summary><b>Features</b></summary>
 <br>
-`• Random Password`
-`• Non-Readable`
-`• Strong Passwords`
-`• You Can Select Character Limits (Maximum 84)`
+• Random Password
+
+• Non-Readable
+
+• Strong Passwords
+
+• You Can Select Character Limits (Maximum 84)
 </br>
 </details>
 
