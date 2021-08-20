@@ -33,7 +33,7 @@ A Simple Telegram Bot That Can Generate Strong Password With Many Features Writt
 ### Variables
 - `API_ID` :- Get This Value From my.telegram.org/
 - `API_HASH` :- Your API_HASH From my.telegram.org/
-- `BOT_TOKEN` :- Your BOT_TOKEN From [@BotFather](https://telegram.me/BotFather] Get This Value When Create Bot
+- `BOT_TOKEN` :- Your BOT_TOKEN From [@BotFather](https://telegram.me/BotFather) Get This Value When Create Bot
 
 ---
 
