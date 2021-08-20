@@ -9,18 +9,15 @@
 A Simple Telegram Bot That Can Generate Strong Password With Many Features Written In Python Using Pyrogram
 
 ---
-<details>
-  <summary><b>Features</b></summary>
-<br>
-<b>• Random Password
+### Features
+• Random Password
 
 • Non-Readable
 
 • Strong Passwords
 
 • You Can Select Character Limits (Maximum 84)</b>
-</br>
-</details>
+
 
 
 ---
