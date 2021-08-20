@@ -1,4 +1,7 @@
 # Author M_fazin <github.com/M-fazin>
+# Don't Kang
+# (C) M_fazin
+# @EKBOTZ_UPDATE
 
 from pyrogram import  Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
