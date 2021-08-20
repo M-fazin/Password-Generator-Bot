@@ -68,7 +68,7 @@ SOFTWARE.
 ### Credits
 - [M-fazin](https://github.com/M-fazin) (Owner)
 - [Pyrogram](https://pyrogram.org) (Library)
-- Fayas & Mr Vishal For Helping Me
+- [Fayas Noushad](https://github.com/FayasNoushad) & [Mr Vishal](https://github.com/MrVishal2K2) For Helping Me
 
 ---
 #### Notice
