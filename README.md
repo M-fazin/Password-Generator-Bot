@@ -10,7 +10,7 @@ A Simple Telegram Bot That Can Generate Strong Password With Many Features Writt
 
 ---
 ### Features
-• Random Password
+<b>• Random Password
 
 • Non-Readable
 
