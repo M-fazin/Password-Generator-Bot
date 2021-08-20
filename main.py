@@ -1,4 +1,5 @@
 # Author M_fazin <github.com/M-fazin>
+# Licence => https://github.com/M-fazin/Password-Generator-Bot/blob/main/LICENSE
 # Don't Kang
 # (C) M_fazin
 # @EKBOTZ_UPDATE
