@@ -1,16 +1,16 @@
 # Password-Generator-Bot
 
 <a href="https://telegram.dog/EKBOTZ_UPDATE"><img src="https://img.shields.io/badge/Telegram-Channel-blue.svg?logo=telegram"></a>
-[![Report Bugs!](https://badgen.net/badge/🐞%20Report%20/Bugs/red)](https://telegram.dog/ekbotz_support)
+<a href="https://telegram.dog/ekbotz_support"><img src="https://img.shields.io/badge/Telegram-Group-blue.svg?logo=telegram"></a>
 
 
 <details>
   <summary><b>Features</b></summary>
 <br>
-<b>• Random Password
-• Non-Readable
-• Strong Passwords
-• You Can Select Character Limits (Maximum 84)</b>
+`• Random Password`
+`• Non-Readable`
+`• Strong Passwords`
+`• You Can Select Character Limits (Maximum 84)`
 </br>
 </details>
 
