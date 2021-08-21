@@ -37,6 +37,10 @@ A Simple Telegram Bot That Can Generate Strong Password With Many Features Writt
 /about /source /code - To Get Info Of Bot
 ```
 
+
+---
+
+
 ### Variables
 - `API_ID` :- Your API_ID, Get This Value From [my.telegram.org/](https://my.telegram.org/)
 - `API_HASH` :- Your API_HASH From [my.telegram.org/](https://my.telegram.org/)
