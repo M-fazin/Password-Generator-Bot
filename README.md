@@ -85,3 +85,7 @@ SOFTWARE.
 #### Notice
 `Kangers Stay Away. Don't Kang Without Permission & Credits`
 
+```
+Pull Requests Are Always Welcome
+```
+
