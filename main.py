@@ -56,7 +56,7 @@ async def password(bot, message):
     except:
        pass    
     if limit >= 85 or limit <= 0:
-        text = "Sorry... Failed To Create Password Because Limit is 1 to 84"
+        text = "Sorry... Failed To Create Password, Because Limit is 1 to 84"
     else:
         randomValue = random.sample(password, limit)
         randomValue = "".join(randomValue)
