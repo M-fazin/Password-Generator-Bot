@@ -58,12 +58,6 @@ Copyright (c) 2021 Muhammed Fazin EK [MIT License](/LICENSE)
 
 ---
 
-## Notice
-
-`Kangers Stay Away. Don't Kang Without Permission & Credits`
-
----
-
 ## Contribution
 
 ```
