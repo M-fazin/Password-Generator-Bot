@@ -20,23 +20,25 @@ BUTTONS = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("Channel 🔰", url = "https://telegram.me/EKBOTZ_UPDATE"),
             InlineKeyboardButton("Support Group ⭕️", url = "https://telegram.me/ekbotz_support")
-	],
+        ],
         [
             InlineKeyboardButton("Repo 🗂️", url = "https://github.com/M-fazin/Password-Generator-Bot"),
             InlineKeyboardButton("Deploy 🗃️", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Password-Generator-Bot")
-	],
+        ],
         [
             InlineKeyboardButton("Developer 💡", url = "https://github.com/M-fazin/")
-	]
+        ]
     ]
 )
 
 HELP = """Hai {},
 **There Is Nothing To Know More.**
 
-- Send Me The Limit Of Your Password
+- Send Me The Limit Of Your Password and Keys (optional)
+  Like :-
+    `10 abcd1234`
+    `10`
 - I Will Give The Password Of That Limit.
-  Ex:- `20`
 
 **Note :-**
 • Only Digits Are Allowed
@@ -47,7 +49,7 @@ HELP_BUTTON = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),
             InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Password-Generator-Bot")
-	]
+        ]
     ]
 )
 
@@ -85,9 +87,9 @@ async def help(bot, update):
 @Bot.on_message(filters.private & filters.command(["about", "source", "repo"]))
 async def about(bot, update):
     await update.reply_text(
-	text=ABOUT,
-	disable_web_page_preview=True,
-	quote=True
+        text=ABOUT,
+        disable_web_page_preview=True,
+        quote=True
     )
 
 
@@ -95,12 +97,15 @@ async def about(bot, update):
 async def password(bot, update):
     
     message = await message.reply_text('`Processing...`')
-    password = "abcdefghijklmnopqrstuvwxyz"+"1234567890"+"!@#$%^&*()_+".lower()
     
     try:
-        limit = int(message.text)
+        if len(update.text.split()) > 1:
+            keys, limit = update.text.split()[1], int(update.text.split()[0])
+        else:
+            keys = "abcdefghijklmnopqrstuvwxyz"+"1234567890"+"!@#$%^&*()_+".lower()
+            limit = int(update.text)
     except:
-        await message.edit_text('Limit is wrong')
+        await message.edit_text('Something wrong')
         return
     
     if limit > 100 or limit <= 0:
